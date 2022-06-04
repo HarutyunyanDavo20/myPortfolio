@@ -1,0 +1,28 @@
+.link-Menu{
+    min-width: 10vw;
+    border: 1px solid black;
+    box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.639);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: rgb(148, 240, 10);
+    font-size: 25px;
+    cursor:pointer;
+    margin: 20px 0;
+    transition: 0.3s;
+    
+    
+}
+
+span{
+    
+}
+
+.link-Menu:hover{
+    transform: scale(1.12);
+    box-shadow: 0 0 7px 7px rgba(255, 255, 255, 0.639);
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}

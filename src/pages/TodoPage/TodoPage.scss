@@ -1,0 +1,29 @@
+
+.todo_page{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 40px;
+  letter-spacing: 5px;
+  box-shadow: 0px 0px 4px 4px #fdd28e8c;
+  background: darkcyan;
+  transition: 0.3s;
+  padding: 30px 50px;
+    button{
+      color: rgb(255, 255, 255);
+      font-size: 45px;
+      text-decoration: none;
+      transition: 0.3s;
+      background: none;
+      cursor: pointer;
+      border: none;
+      padding: 5px;
+    }
+    button:hover{
+        transform: scale(1.2);
+        color: rgb(224, 108, 108);
+        background: rgb(36, 36, 36);
+        border-radius: 10px;
+    }
+}

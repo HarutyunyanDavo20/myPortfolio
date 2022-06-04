@@ -1,0 +1,36 @@
+.wrapper_header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    font-size: 35px;
+    h1{
+      border: 1px solid rgb(255, 255, 255) ;
+      border-radius: 15px;
+      user-select: none;
+      transition: 0.5s;
+      color:rgb(255, 255, 255);
+      font-family: cursive;
+      text-align: center;
+      padding: 10px;
+      border: 10px solid blue;
+      animation: colorAnimation 3s  alternate ;
+     
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+  
+  @keyframes colorAnimation {
+    from{
+      padding: 30vh 10px;
+      border: 1px solid red;
+    }
+  
+    to{
+      padding: 10px 10px;
+      border: 10px solid blue;
+    }
+  }

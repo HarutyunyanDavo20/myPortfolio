@@ -1,0 +1,26 @@
+.form-auth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-auth > input {
+    width: 300px;
+    height: 45px;
+    max-width: 80vw;
+    max-height: 80vh;
+    background: white;
+    border: black 1px solid;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 25px;
+    transition: .3s;
+}
+
+.form-auth > input:focus{
+    width: 400px;
+    border: none;
+    background: black;
+    color: white
+}

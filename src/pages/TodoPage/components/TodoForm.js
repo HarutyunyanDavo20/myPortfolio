@@ -1,11 +1,12 @@
 import React from "react";
 import { Alert, TextField } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
-
+import DoneIcon from "@mui/icons-material/Done";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { add } from "../../app/TodosSlice";
+
 import { useEffect } from "react";
+import { add } from "../../../app/TodosSlice";
 
 const TodoForm = () => {
   const [title, setTitle] = useState("");
@@ -13,7 +14,8 @@ const TodoForm = () => {
 
   const dispatch = useDispatch();
 
-  const handleAddTodo = () => {
+  const handleAddTodo = (e) => {
+    e.preventDefault();
     if (title) {
       dispatch(add({ title }));
       setTitle("");
@@ -33,11 +35,9 @@ const TodoForm = () => {
     }
   }, [successAdd]);
 
-  
-
   return (
     <>
-      <div className="todo-form">
+      <form onSubmit={handleAddTodo} className="todo-form">
         <div>
           <TextField
             value={title}
@@ -49,22 +49,29 @@ const TodoForm = () => {
             sx={{ fontSize: 50 }}
           />
         </div>
-        <div className="add-todo" onClick={handleAddTodo}>
+        <button type="submit" className="add-todo" onSubmit={handleAddTodo}>
           <AddIcon sx={{ width: "35px", height: "100%", fontSize: "30px" }} />
-        </div>
-       
+        </button>
+      </form>
+      <div className="message-succes">
+        {successAdd ? (
+          <div>
+            <Alert
+              className="alert-success-add"
+              icon={false}
+              variant="filled"
+              severity="success"
+            >
+              <span>Todo success added </span>{" "}
+              <span className="done-icon">
+                <DoneIcon />
+              </span>
+            </Alert>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
-     <div className="message-succes">
-     {successAdd ? (
-        <div className="alert-success-add">
-          <Alert onClose={() => {}}>
-            Todo success added
-          </Alert>
-        </div>
-      ) : (
-        <></>
-      )}
-     </div>
     </>
   );
 };

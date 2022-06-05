@@ -3,7 +3,7 @@ import './Menu.scss'
 
 const Menu = ({title, onClick, }) => {
     return (
-        <div className='link-Menu' onClick={onClick}>
+        <div className='link-Menu' onClick={() => onClick(title)}>
             <span>{title}</span>
         </div>
     );

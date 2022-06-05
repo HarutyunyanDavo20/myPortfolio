@@ -1,15 +1,16 @@
 .todo-item{
     margin: 10px 30px;
     border: 2px solid black;
-    border-radius: 9px;
+    border-radius: 25px;
     box-shadow: 0 0 2px 2px  rgba(243, 243, 30, 0.465) ;
     text-align: center;
     background: black;
     color: rgb(219, 191, 139);
     display: flex;
     justify-content: space-between;
-    transition: 1s;
+    transition: 0.6s;
     user-select: none;
+    overflow: hidden;
     div{
         opacity: 0;
         transition: 0.6s;
@@ -19,8 +20,16 @@
            opacity: 1;
        }
    }
+   button{
+    transition: 0.6s;
+   }
+   
 }
 
 .todo-item:hover{
     box-shadow: 0 0 5px 5px  rgba(243, 207, 30, 0.935) ;
+        button{
+         transform: scale(1.1);
+        }
+    
 }

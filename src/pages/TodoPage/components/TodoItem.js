@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { useDispatch } from "react-redux";
-import { setCompleted, end } from "../../app/TodosSlice";
+import { end, setCompleted } from "../../../app/TodosSlice";
 import './TodoItem.scss'
 
 const TodoItem = ({ todo }) => {
@@ -25,7 +25,7 @@ const TodoItem = ({ todo }) => {
       }}
     >
       {todo.title}
-      <div>
+      <div className="todo_item_btn">
         {todo.isCompleted ? (
           <Button variant="contained" color="primary" onClick={handleDelete}>
             Delete

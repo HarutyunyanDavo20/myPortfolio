@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 const apps = [
   { name: "Todos", id: 1 },
-  { name: "Cats", id: 2 }
+  { name: "Cats", id: 2 },
+  {name: 'Store', id: 3}
 ];
 
 const Applist = () => {
@@ -25,8 +26,8 @@ const Applist = () => {
     }
   }, [path, navigate]);
 
-  const handleClick = (e) => {
-    setPath(e.target.innerHTML)
+  const handleClick = (title) => {
+    setPath(title)
   }
 
   return (

@@ -8,6 +8,7 @@
     border-radius: 15px;
     overflow: hidden;
     margin: 0 15px;
+    padding: 20px;
   }
 
 .wrapper_todos {
@@ -21,7 +22,10 @@
     margin: 0 25px;
     user-select: none;
     h1{
-      color: wheat;
+        margin-top: 25px;
+      color: rgb(57, 57, 57);
+      box-shadow: 0 0 5px 5px red;
+      border-radius: 5px;
     }
     @media screen and (max-width: 640px) {
         margin: 100px 25px;
@@ -64,7 +68,7 @@
     top: 15px;
     right: 15px;
     cursor: pointer;
-    color: rgb(253, 235, 202);
+    color: rgb(0, 183, 255);
 }
 
 
@@ -112,12 +116,22 @@
     overflow: hidden;
 }
 
+.done-icon{
+    position: absolute;
+    right: 3px;
+    bottom: 10px;
+}
+
 .alert-success-add{
+    min-width: 200px;
     position: absolute;
     right: 15px;
     bottom: 10px;
     transition: 0.5s;
     animation: succes 5s alternate;
+    display: flex;
+    flex-direction: column;
+   
 }
 
 @keyframes succes{
@@ -125,10 +139,10 @@
         right: -600px;
     }
     15%{
-        right: 10vw;
+        right: 1vw;
     }
     85%{
-        right: 10vw;
+        right: 1vw;
     }
     100%{
         right: -600px;

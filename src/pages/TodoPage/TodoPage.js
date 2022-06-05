@@ -1,12 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import TodoList from "../../components/Todos/TodoList";
 import { useDispatch, useSelector } from "react-redux";
 import "./TodoPage.scss";
 import GoBack from "../../components/icons/GoBack";
 import Messages from "../../components/icons/Messages";
-import MessagesTodos from "../../components/Todos/MessagesTodos";
+import MessagesTodos from "./components/MessagesTodos";
 import { closeMessages } from "../../app/TodosSlice";
+import TodoList from "./components/TodoList";
 
 const TodoPage = () => {
   const [open, setOpen] = useState("close");
@@ -24,7 +24,7 @@ const TodoPage = () => {
     if (!openMessages) {
       dispatch(closeMessages());
     }
-  }, [openMessages]);
+  }, [openMessages, dispatch]);
 
   return (
     <>
@@ -47,7 +47,7 @@ const TodoPage = () => {
 
       <div className={`wrapper_todos ${open}`}>
         <h1>Todos Application</h1>
-        <TodoList />
+        <TodoList />  
       </div>
     </>
   );
